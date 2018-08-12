@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Javascript Furry game</title>
+    <link rel='stylesheet' href='main.css'> </head>
+
+<body onload="initGame()" onkeydown="move(event)">
+    <section id='score'>
+        <div> SCORE
+            <br> <strong class="points">0</strong> </div>
+    </section>
+    <div id="board"></div>
+    <section id="over" class="invisible">
+        <h2 id="gamesOver"><strong>GAME OVER!!</strong></h2>
+        <h2 id="yourScore">0</h2>
+        <div id="restartButton" onClick="window.location.reload()">RESTART</div>
+    </section>
+    <!-- sounds-->
+    <!--
+   <audio id="coin" src="sounds/Coin-pick-up-sound-effect.mp3"></audio>
+<audio id="loseLife" src="sounds/Game-over-robotic-voice.mp3"></audio>
+-->
+    <script type="text/javascript" src="app.js"></script>
+</body>
+
+</html>

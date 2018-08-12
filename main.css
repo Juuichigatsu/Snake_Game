@@ -1,0 +1,97 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    /*    background-image: url('../images/congruent_pentagon.png');*/
+}
+
+section#score {
+    width: 100%;
+}
+
+#board .snake {
+    background-color: black;
+}
+
+#board .apple {
+    background-color: red;
+}
+
+#board {
+    width: 500px;
+    height: 500px;
+    margin: auto;
+}
+
+#board > div {
+    border: 1px solid #148919;
+    float: left;
+    width: 25px;
+    height: 25px;
+}
+
+section#score div {
+    width: 10em;
+    height: 3em;
+    text-align: center;
+    padding: 0.5em;
+    border: 1px solid #1bc422;
+    border-radius: 1px;
+    box-shadow: 1px 1px 5px 1px rgb(27, 196, 34);
+    margin: 1em auto;
+    font-weight: 700;
+}
+
+section#over {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    padding: 10px;
+    background-color: rgba(255, 255, 0, 0.75);
+}
+
+section#over pre {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    font-size: 10px;
+    font-weight: bolder;
+    color: brown;
+}
+
+.invisible {
+    display: none;
+}
+
+h2 {
+    font-size: 30px;
+    color: rgb(11, 108, 71);
+    text-align: center;
+    margin-top: 100px;
+}
+
+#restartButton {
+    text-align: center;
+    width: 200px;
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: #123d54;
+    padding: 10px 20px;
+    background: -moz-linear-gradient( top, #3bdb66 0%, #d2e810);
+    background: -webkit-gradient( linear, left top, left bottom, from(#3bdb66), to(#d2e810));
+    -moz-border-radius: 30px;
+    -webkit-border-radius: 30px;
+    border-radius: 30px;
+    border: 1px solid #003366;
+    -moz-box-shadow: 0px 1px 3px rgba(000, 000, 000, 0.5), inset 0px 0px 1px rgba(255, 255, 255, 1);
+    -webkit-box-shadow: 0px 1px 3px rgba(000, 000, 000, 0.5), inset 0px 0px 1px rgba(255, 255, 255, 1);
+    box-shadow: 0px 1px 3px rgba(000, 000, 000, 0.5), inset 0px 0px 1px rgba(255, 255, 255, 1);
+    text-shadow: 0px -1px 0px rgba(000, 000, 000, 0.7), 0px 1px 0px rgba(255, 255, 255, 0.3);
+}

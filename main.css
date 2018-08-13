@@ -5,7 +5,7 @@
 body {
     margin: 0;
     padding: 0;
-    /*    background-image: url('../images/congruent_pentagon.png');*/
+    background: rgb(137, 137, 137);
 }
 
 section#score {
@@ -20,6 +20,10 @@ section#score {
     background-color: red;
 }
 
+#board .mine {
+    background-color: cyan;
+}
+
 #board {
     width: 500px;
     height: 500px;
@@ -31,6 +35,7 @@ section#score {
     float: left;
     width: 25px;
     height: 25px;
+    box-shadow: 1px 1px 5px 1px rgb(27, 196, 34);
 }
 
 section#score div {
@@ -53,7 +58,7 @@ section#over {
     top: 0;
     z-index: 1;
     padding: 10px;
-    background-color: rgba(255, 255, 0, 0.75);
+    background-color: rgba(255, 255, 0, 0.5);
 }
 
 section#over pre {
@@ -70,7 +75,7 @@ section#over pre {
 }
 
 h2 {
-    font-size: 30px;
+    font-size: 50px;
     color: rgb(11, 108, 71);
     text-align: center;
     margin-top: 100px;
@@ -78,6 +83,7 @@ h2 {
 
 #restartButton {
     text-align: center;
+    cursor: pointer;
     width: 200px;
     margin: 0 auto;
     font-family: Arial, Helvetica, sans-serif;

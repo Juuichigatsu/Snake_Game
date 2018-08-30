@@ -1,5 +1,5 @@
 # Snake_Game
-Snake Game in JS
+Snake Game in Pure JavaScript
 
 https://juuichigatsu.github.io/Snake_Game/.
 

@@ -1,23 +1,23 @@
-var snakeX;
-var snakeY;
-var snakeDirection;
-var snakeLength;
-var speed = 4;
-var score = 0;
+let snakeX;
+let snakeY;
+let snakeDirection;
+let snakeLength;
+let speed = 4;
+let score = 0;
 const startSpeed = 1000;
 const board = [];
 const boardX = 20;
 const boardY = 20;
 
 function initGame() {
-    var cell = {
+    let cell = {
         snake: 0
     }
-    for (var y = 0; y < boardY; y++) {
+    for (let y = 0; y < boardY; y++) {
         const boardElement = document.querySelector("#board")
         vae row = [];
-        for (var x = 0; x < boardX; x++) {
-            var cell = {};
+        for (let x = 0; x < boardX; x++) {
+            let cell = {};
             // Create a <div></div> and store it in the cell object
             cell.element = document.createElement('div');
             // Add it to the board
@@ -39,8 +39,8 @@ function startGame() {
     snakeLength = 1;
     snakeDirection = "right";
     // Clear the board
-    for (var y = 0; y < boardY; y++) {
-        for (var x = 0; x < boardX; x++) {
+    for (let y = 0; y < boardY; y++) {
+        for (let x = 0; x < boardX; x++) {
             board[y][x].snake = 0;
             board[y][x].apple = 0;
             board[y][x].mine = 0;
@@ -99,8 +99,8 @@ function gameLoop() {
     }
     board[snakeY][snakeX].snake = snakeLength;
     // Loop over the entire board, and update every cell
-    for (var y = 0; y < boardY; y++) {
-        for (var x = 0; x < boardX; x++) {
+    for (let y = 0; y < boardY; y++) {
+        for (let x = 0; x < boardX; x++) {
             var cell = board[y][x];
             if (cell.snake) {
                 cell.element.className = 'snake';
@@ -141,19 +141,19 @@ function move(event) {
 };
 
 function apple() {
-    var scoreCounter = document.querySelector('#score div strong');
+    let scoreCounter = document.querySelector('#score div strong');
     // A random coordinate for the apple    
-    var appleX = Math.floor(Math.random() * boardX);
-    var appleY = Math.floor(Math.random() * boardY);
+    let appleX = Math.floor(Math.random() * boardX);
+    let appleY = Math.floor(Math.random() * boardY);
     board[appleY][appleX].apple = 1;
     this.score++;
     scoreCounter.innerHTML = (this.score) - 1;
 }
 
 function mine() {
-    // A random coordinate for the apple
-    var mineX = Math.floor(Math.random() * boardX);
-    var mineY = Math.floor(Math.random() * boardY);
+    // A random coordinate for the mine
+    let mineX = Math.floor(Math.random() * boardX);
+    let mineY = Math.floor(Math.random() * boardY);
     board[mineY][mineX].mine = 1;
 }
 
@@ -161,9 +161,9 @@ function gameOver() {
     document.getElementById("loseLife").play();
     document.querySelector('#board').classList.add('invisible');
     document.querySelector('#over').classList.remove('invisible');
-    var over = document.querySelector("#over");
-    var gameO = document.querySelector("#gamesOver");
-    var yourScore = document.querySelector("#yourScore");
-    var points = document.querySelector(".points");
+    let over = document.querySelector("#over");
+    let gameO = document.querySelector("#gamesOver");
+    let yourScore = document.querySelector("#yourScore");
+    let points = document.querySelector(".points");
     yourScore.textContent = points.textContent;
 }
